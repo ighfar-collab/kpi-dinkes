@@ -8,6 +8,7 @@ use App\Http\Controllers\BidangPencegahanPenyakitMenularController;
 use App\Http\Controllers\BidangSumberDayaKesehatanMasyarakatController;
 use App\Http\Controllers\SekretariatController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +21,7 @@ use App\Http\Controllers\DashboardController;
 */
 
 
-
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])
     ->middleware('guest')
     ->name('login');
@@ -48,6 +49,9 @@ Route::resource('bidang_pelayanan_kesehatan', BidangPelayananKesehatanMasyarakat
 Route::resource('bidang_pencegahan', BidangPencegahanPenyakitMenularController::class);
 Route::resource('sumber_daya', BidangSumberDayaKesehatanMasyarakatController::class);
 Route::resource('sekretariat', SekretariatController::class);
+Route::get('user', [UserController::class, 'index'])->name('user.index');
+    Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
   Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 

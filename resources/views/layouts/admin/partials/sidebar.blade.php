@@ -21,9 +21,8 @@
                     <span>Bidang Sumber Daya Kesehatan</span></a></li>
                                        <li class="active"><a class="nav-link" href="{{ route('sekretariat.index') }}"><i class="far fa-square"></i>
                     <span>Sekretariat</span></a></li>
-            <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i>
-                    <span>Admin</span></a>
+  <li class="menu-header"><a class="nav-link" href="{{ route('user.index') }}">Admin</a></li>
+           
         
             </li>
         </ul>

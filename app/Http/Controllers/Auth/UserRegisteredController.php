@@ -13,12 +13,14 @@ public function store(Request $request): RedirectResponse
         'name' => ['required', 'string', 'max:255'],
         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
         'password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'role' => ['required', 'string', 'max:255'],
     ]);
 
     $user = User::create([
         'name' => $request->name,
         'email' => $request->email,
         'password' => Hash::make($request->password),
+        'role' => $request->role,
     ]);
 
     $user->assignRole('user'); // role default user
