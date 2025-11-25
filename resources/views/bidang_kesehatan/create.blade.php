@@ -39,11 +39,7 @@
             <label>Tahun</label>
             <input name="year" value="{{ old('year') }}" class="form-control" type="number">
         </div>
-    
-        <div class="mb-3">
-            <label>Lokasi</label>
-            <input name="lokasi" value="{{ old('lokasi') }}" class="form-control">
-        </div>
+  
         <div class="mb-3">
             <label>Angka Kematian Ibu (per 100.000)</label>
             <input name="angka_kematian_ibu_per_100000" value="{{ old('angka_kematian_ibu_per_100000') }}" class="form-control" step="0.01" type="number">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('bidang_sumber_daya_kesehatan_masyarakats', function (Blueprint $table) {
             $table->id();
              $table->year('year')->nullable();
-    $table->string('bulan')->nullable(); // Tambah kolom bulan
+    $table->string('month')->nullable(); // Tambah kolom bulan
     $table->string('lokasi')->nullable();
     $table->decimal('indeks_rasio_dokter_dengan_penduduk', 8, 4)->nullable();
     $table->decimal('indeks_rasio_dokter_spesialis_dengan_penduduk', 8, 4)->nullable();

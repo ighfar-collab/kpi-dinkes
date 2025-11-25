@@ -34,18 +34,15 @@
             <label>Tahun</label>
             <input name="year" class="form-control" value="{{ old('year') }}" type="number">
         </div>
-        <div class="mb-3">
-            <label>Lokasi</label>
-            <input name="lokasi" class="form-control" value="{{ old('lokasi') }}">
-        </div>
+   
         <div class="mb-3">
             <label>Indeks Rasio Dokter dengan Penduduk</label>
-            <input name="indeks_rasio_dokter_dengan_penduduk" class="form-control" value="{{ old('indeks_rasio_dokter_dengan_penduduk') }}" step="0.0001" type="number">
+            <input name="indeks_rasio_dokter_dengan_penduduk" class="form-control" value="{{ old('indeks_rasio_dokter_dengan_penduduk') }}" step="0.00001" type="number">
             <small class="text-muted">Isi angka rasio (contoh: 0.8500)</small>
         </div>
         <div class="mb-3">
             <label>Indeks Rasio Dokter Spesialis dengan Penduduk</label>
-            <input name="indeks_rasio_dokter_spesialis_dengan_penduduk" class="form-control" value="{{ old('indeks_rasio_dokter_spesialis_dengan_penduduk') }}" step="0.0001" type="number">
+            <input name="indeks_rasio_dokter_spesialis_dengan_penduduk" class="form-control" value="{{ old('indeks_rasio_dokter_spesialis_dengan_penduduk') }}" step="0.00001" type="number">
         </div>
 
         <button class="btn btn-success">Simpan</button>

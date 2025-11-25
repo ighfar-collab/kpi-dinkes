@@ -17,7 +17,7 @@
                 <th>ID</th>
                 <th>Tahun</th>
                   <th>Bulan</th>
-                <th>Lokasi</th>
+              
                 <th>Angka Kematian Ibu (per 100.000)</th>
                 <th>Angka Kematian Bayi (per 1.000)</th>
                 <th>Prevalensi Stunting (%)</th>
@@ -31,7 +31,7 @@
                 <td>{{ $it->id }}</td>
                 <td>{{ $it->year }}</td>
                          <td>{{ $it->month }}</td>
-                <td>{{ $it->lokasi }}</td>
+
                 <td>{{ $it->angka_kematian_ibu_per_100000 }}</td>
                 <td>{{ $it->angka_kematian_bayi_per_1000 }}</td>
                 <td>{{ $it->prevalensi_stunting }}</td>

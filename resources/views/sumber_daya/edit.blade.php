@@ -35,10 +35,7 @@
             <label>Tahun</label>
             <input name="year" class="form-control" value="{{ old('year', $item->year) }}" type="number">
         </div>
-        <div class="mb-3">
-            <label>Lokasi</label>
-            <input name="lokasi" class="form-control" value="{{ old('lokasi', $item->lokasi) }}">
-        </div>
+   
         <div class="mb-3">
             <label>Indeks Rasio Dokter dengan Penduduk</label>
             <input name="indeks_rasio_dokter_dengan_penduduk" class="form-control" value="{{ old('indeks_rasio_dokter_dengan_penduduk', $item->indeks_rasio_dokter_dengan_penduduk) }}" step="0.0001" type="number">

@@ -45,7 +45,7 @@
 
         <div class="mb-3">
             <label>Pengendalian Konsumsi Merokok pada Usia 10-18 Tahun (%)</label>
-            <input type="number" name="pengendalian_konsumsi_merokok_usia_10_18" class="form-control" step="0.01" value="{{ old('pengendalian_konsumsi_merokok_usia_10_18') }}" required>
+            <input type="number" name="pengendalian_merokok_usia_10_18" class="form-control" step="0.01" value="{{ old('pengendalian_merokok_usia_10_18') }}" required>
         </div>
 
         <div class="mb-3">

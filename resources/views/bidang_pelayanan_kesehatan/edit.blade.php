@@ -33,11 +33,7 @@
             @error('year') <small class="text-danger">{{ $message }}</small> @enderror
         </div>
 
-        <div class="mb-3">
-            <label for="lokasi" class="form-label">Lokasi</label>
-            <input type="text" name="lokasi" id="lokasi" class="form-control" value="{{ old('lokasi', $item->lokasi) }}">
-            @error('lokasi') <small class="text-danger">{{ $message }}</small> @enderror
-        </div>
+  
 
         <div class="mb-3">
             <label for="persentase_fasyankes_terakreditasi" class="form-label">Persentase Fasilitas Kesehatan Terakreditasi (%)</label>

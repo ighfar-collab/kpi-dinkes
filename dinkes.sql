@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 10, 2025 at 07:20 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.1.25
+-- Host: localhost:3306
+-- Generation Time: Nov 24, 2025 at 11:11 AM
+-- Server version: 11.4.8-MariaDB-cll-lve
+-- PHP Version: 8.4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dinkes`
+-- Database: `ighp6117_dinkes`
 --
 
 -- --------------------------------------------------------
@@ -48,8 +48,7 @@ INSERT INTO `bidang_kesehatan_masyarakats` (`id`, `year`, `month`, `lokasi`, `an
 (1, '2025', 'Mei', 'Kabupaten X', 120, 12, 24.50, 42.00, '2025-11-02 18:15:53', '2025-11-09 05:39:33'),
 (4, '2024', 'Juni', 'Kabupaten X', 150, 25, 34.50, 42.00, '2025-11-02 18:15:53', '2025-11-02 21:00:32'),
 (5, '2024', 'Juli', 'Kabupaten X', 90, 50, 34.50, 42.00, '2025-11-02 18:15:53', '2025-11-02 21:00:32'),
-(6, '2024', 'Agustus', 'Kabupaten X', 70, 20, 14.50, 42.00, '2025-11-02 18:15:53', '2025-11-02 21:00:32'),
-(7, '2025', 'Oktober', 'Maluku', 89, 8, 90.00, 8.00, '2025-11-09 21:36:02', '2025-11-09 21:36:02');
+(6, '2024', 'Agustus', 'Kabupaten X', 70, 20, 14.50, 42.00, '2025-11-02 18:15:53', '2025-11-02 21:00:32');
 
 -- --------------------------------------------------------
 
@@ -119,8 +118,8 @@ CREATE TABLE `bidang_sumber_daya_kesehatan_masyarakats` (
   `year` year(4) DEFAULT NULL,
   `month` varchar(255) DEFAULT NULL,
   `lokasi` varchar(255) DEFAULT NULL,
-  `indeks_rasio_dokter_dengan_penduduk` decimal(8,4) DEFAULT NULL,
-  `indeks_rasio_dokter_spesialis_dengan_penduduk` decimal(8,4) DEFAULT NULL,
+  `indeks_rasio_dokter_dengan_penduduk` decimal(6,5) DEFAULT NULL,
+  `indeks_rasio_dokter_spesialis_dengan_penduduk` decimal(6,5) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -130,10 +129,11 @@ CREATE TABLE `bidang_sumber_daya_kesehatan_masyarakats` (
 --
 
 INSERT INTO `bidang_sumber_daya_kesehatan_masyarakats` (`id`, `year`, `month`, `lokasi`, `indeks_rasio_dokter_dengan_penduduk`, `indeks_rasio_dokter_spesialis_dengan_penduduk`, `created_at`, `updated_at`) VALUES
-(1, '2025', 'Mei', 'Maluku', 0.0004, 0.0001, '2025-11-07 23:51:13', '2025-11-07 23:51:13'),
-(2, '2025', 'Juni', 'Maluku', 0.0006, 0.0007, '2025-11-09 21:25:00', '2025-11-09 21:47:56'),
-(3, '2025', 'Juli', 'Maluku', 0.0007, 0.0007, '2025-11-09 21:31:49', '2025-11-09 21:48:23'),
-(4, '2025', 'Agustus', 'Maluku', 0.0006, 0.0003, '2025-11-09 21:42:04', '2025-11-09 21:42:04');
+(1, '2025', 'Mei', 'Maluku', 0.00040, 0.00010, '2025-11-07 23:51:13', '2025-11-07 23:51:13'),
+(2, '2025', 'Juni', 'Maluku', 0.00060, 0.00070, '2025-11-09 21:25:00', '2025-11-09 21:47:56'),
+(3, '2025', 'Juli', 'Maluku', 0.00070, 0.00070, '2025-11-09 21:31:49', '2025-11-09 21:48:23'),
+(4, '2025', 'Agustus', 'Maluku', 0.00060, 0.00030, '2025-11-09 21:42:04', '2025-11-09 21:42:04'),
+(5, '2025', 'September', NULL, 0.00890, 0.00430, '2025-11-23 21:04:27', '2025-11-23 21:04:27');
 
 -- --------------------------------------------------------
 
@@ -295,8 +295,7 @@ CREATE TABLE `sekretariats` (
 INSERT INTO `sekretariats` (`id`, `year`, `month`, `nilai_sakip`, `created_at`, `updated_at`) VALUES
 (1, '2025', 'Mei', 85.50, '2025-11-08 20:09:10', '2025-11-09 22:04:25'),
 (2, '2025', 'Juni', 89.00, '2025-11-08 20:10:37', '2025-11-09 22:04:57'),
-(3, '2025', 'Juli', 87.89, '2025-11-08 20:13:29', '2025-11-08 20:13:29'),
-(4, '2025', 'Agustus', 79.00, '2025-11-09 21:53:23', '2025-11-09 21:53:23');
+(3, '2024', 'Agustus', 87.89, '2025-11-08 20:13:29', '2025-11-23 06:20:51');
 
 -- --------------------------------------------------------
 
@@ -310,6 +309,7 @@ CREATE TABLE `users` (
   `email` varchar(255) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) NOT NULL,
+  `role` varchar(20) NOT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -319,9 +319,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Ighfar Ilaina', 'i@j.l', NULL, '$2y$12$0LLx9xGbxbenk7ipVIDFqO5C7hbyVGkTIXZb.sQ3t/Bkzc3pr1JBm', NULL, '2025-10-30 05:28:13', '2025-10-30 05:28:13'),
-(2, 'admin', 'admin@admin.com', NULL, '$2y$12$EXs3aPgo0UE0gaWlIdcCsuy9xtsAVRAEQXxrrQYj17xcp8Miu5/7K', NULL, '2025-11-09 23:18:26', '2025-11-09 23:18:26');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'admin', 'admin@admin.com', NULL, '$2y$12$EXs3aPgo0UE0gaWlIdcCsuy9xtsAVRAEQXxrrQYj17xcp8Miu5/7K', 'admin', 'c7xDjDZMBPLmbKaiQegdnjqDDj8T59x2qaitxMLPXnTJR4XXHHX2ZOyBPxUt', '2025-11-09 23:18:26', '2025-11-09 23:18:26');
 
 --
 -- Indexes for dumped tables
@@ -434,7 +433,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `bidang_kesehatan_masyarakats`
 --
 ALTER TABLE `bidang_kesehatan_masyarakats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `bidang_pelayanan_kesehatan_masyarakats`
@@ -446,13 +445,13 @@ ALTER TABLE `bidang_pelayanan_kesehatan_masyarakats`
 -- AUTO_INCREMENT for table `bidang_pencegahan_penyakit_menulars`
 --
 ALTER TABLE `bidang_pencegahan_penyakit_menulars`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `bidang_sumber_daya_kesehatan_masyarakats`
 --
 ALTER TABLE `bidang_sumber_daya_kesehatan_masyarakats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -488,7 +487,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `sekretariats`
 --
 ALTER TABLE `sekretariats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`

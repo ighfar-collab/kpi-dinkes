@@ -15,9 +15,9 @@
                 <th>ID</th>
                     <th>Bulan</th>
                 <th>Tahun</th>
-                <th>Lokasi</th>
-                <th>Rasio Dokter (per unit)</th>
-                <th>Rasio Dokter Spesialis (per unit)</th>
+            
+                <th>Rasio Dokter dengan Penduduk</th>
+                <th>Rasio Dokter Spesialis dengan Penduduk</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -27,9 +27,9 @@
                 <td>{{ $it->id }}</td>
                 <td>{{ $it->month }}</td>
                 <td>{{ $it->year }}</td>
-                <td>{{ $it->lokasi }}</td>
-                <td>{{ $it->indeks_rasio_dokter_dengan_penduduk }}</td>
-                <td>{{ $it->indeks_rasio_dokter_spesialis_dengan_penduduk }}</td>
+                
+                <td>{{ number_format($it->indeks_rasio_dokter_dengan_penduduk, 5, '.', '') }}</td>
+                <td>{{ number_format($it->indeks_rasio_dokter_spesialis_dengan_penduduk , 5, '.', '') }}</td>
                 <td>
                   
                     <a href="{{ route('sumber_daya.edit', $it) }}" class="btn btn-sm btn-warning">Edit</a>

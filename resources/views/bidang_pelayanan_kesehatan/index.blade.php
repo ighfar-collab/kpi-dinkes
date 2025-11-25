@@ -18,7 +18,7 @@
  <th>#</th>
                 <th>Tahun</th>
                 <th>Bulan</th>
-                <th>Lokasi</th>
+                
                 <th>Persentase Fasyankes Terakreditasi (%)</th>
                 <th>Rumah Sakit Terakreditasi</th>
                 <th>Puskesmas Terakreditasi Madya</th>
@@ -31,7 +31,7 @@
   <td>{{ $it->id }}</td>
                 <td>{{ $it->year }}</td>
                 <td>{{ $it->month }}</td>
-                <td>{{ $it->lokasi }}</td>
+            
                 <td>{{ $it->persentase_fasyankes_terakreditasi }}</td>
                 <td>{{ $it->jumlah_rs_terakreditasi }}</td>
                 <td>{{ $it->jumlah_puskesmas_terakreditasi_madya }}</td>

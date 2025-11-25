@@ -32,7 +32,7 @@
     @error('bulan') <small class="text-danger">{{ $message }}</small> @enderror
 </div>
         <div class="mb-3"><label>Tahun</label><input name="year" value="{{ old('year', $item->year) }}" class="form-control" type="number"></div>
-        <div class="mb-3"><label>Lokasi</label><input name="lokasi" value="{{ old('lokasi', $item->lokasi) }}" class="form-control"></div>
+
         <div class="mb-3"><label>Angka Kematian Ibu (per 100.000)</label><input name="angka_kematian_ibu_per_100000" value="{{ old('angka_kematian_ibu_per_100000', $item->angka_kematian_ibu_per_100000) }}" class="form-control" step="0.01" type="number"></div>
         <div class="mb-3"><label>Angka Kematian Bayi (per 1.000)</label><input name="angka_kematian_bayi_per_1000" value="{{ old('angka_kematian_bayi_per_1000', $item->angka_kematian_bayi_per_1000) }}" class="form-control" step="0.01" type="number"></div>
         <div class="mb-3"><label>Prevalensi Stunting (%)</label><input name="prevalensi_stunting" value="{{ old('prevalensi_stunting', $item->prevalensi_stunting) }}" class="form-control" step="0.01" type="number" min="0" max="100"></div>
