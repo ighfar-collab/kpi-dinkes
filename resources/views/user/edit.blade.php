@@ -24,8 +24,8 @@
         </div>
 
         <div class="mb-3">
-            <label>Password (kosongkan jika tidak diganti)</label>
-            <input type="password" class="form-control" name="password">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" value="{{ $user->password }}">
         </div>
 
         <button class="btn btn-primary">Simpan</button>

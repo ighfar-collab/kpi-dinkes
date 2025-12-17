@@ -11,7 +11,7 @@
            
             <li class="menu-header" >Master Data</li>
                        <li class="active"><a class="nav-link" href="{{ route('bidang_kesehatan.index') }}"><i class="far fa-square"></i>
-                    <span>Bidang Kesehatan</span></a></li>
+                    <span>Bidang Kesehatan Masyarakat</span></a></li>
                        <li class="active"><a class="nav-link" href="{{ route('bidang_pelayanan_kesehatan.index') }}"><i class="far fa-square"></i>
                     <span>Bidang Pelayanan Kesehatan</span></a></li>
                           <li class="active"><a class="nav-link" href="{{ route('bidang_pencegahan.index') }}"><i class="far fa-square"></i>
